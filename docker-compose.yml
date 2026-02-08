@@ -1,10 +1,9 @@
 services:
-  availablityio:
-    container_name: availablityio
-    image: hossman39/availablityio
+  availabilityio:
+    container_name: availabilityio
+    image: hossman39/availabilityio:latest
     ports:
       - "7874:7874"
-    environment:
-      - TMDB_API_KEY=(your_tmdb_api_key_here)
-      - PORT=7874
+    env_file:
+      - .env
     restart: unless-stopped
