@@ -1,0 +1,23 @@
+{
+  "name": "availabilityio",
+  "version": "1.0.0",
+  "description": "Stremio stream addon showing TMDB digital release availability",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "stremio-addon-sdk": "^1.6.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
