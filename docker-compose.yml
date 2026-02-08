@@ -1,8 +1,9 @@
 version: "3.9"
 
 services:
-  stremio-addon:
-    build: .
+  availablityio:
+    container_name: availablityio
+    image: hossman39/Availablitio:latest
     ports:
       - "7874:7874"
     environment:
