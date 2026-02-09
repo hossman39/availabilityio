@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import { addonBuilder, serveHTTP } from "stremio-addon-sdk";
+import type { StreamArgs } from "stremio-addon-sdk";
 
 dotenv.config();
 
@@ -65,7 +66,7 @@ const getDigitalReleaseDate = async (tmdbId: number): Promise<string | null> => 
   return candidates[0];
 };
 
-builder.defineStreamHandler(async (args) => {
+builder.defineStreamHandler(async (args: StreamArgs) => {
   if (!TMDB_API_KEY) {
     return {
       streams: [
