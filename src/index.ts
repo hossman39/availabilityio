@@ -23,6 +23,7 @@ const manifest = {
   name: "Availabilityio Digital Release Streams",
   version: "1.0.0",
   description: "Shows a stream card once the TMDB digital release date has passed.",
+  catalogs: [],
   resources: ["stream"],
   types: ["movie"],
   idPrefixes: ["tt"]
