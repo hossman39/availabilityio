@@ -53,7 +53,7 @@ const getDigitalReleaseDate = async (tmdbId: number): Promise<string | null> => 
   const getDigitalDates = (items: typeof results) =>
     items
       .flatMap((result) => result.release_dates ?? [])
-      .filter((release) => release.type === 4 && release.release_date)
+      .filter((release) => (release.type === 4 || release.type === 5) && release.release_date)
       .map((release) => release.release_date);
 
   const preferred = getDigitalDates(usResult ? [usResult] : []);
